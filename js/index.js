@@ -28,15 +28,17 @@ function blogPage (state, emit) {
 
 const navView = (state, emit) => {
 	return html`
-		<div class="navigation margin-auto mw-small">
-			<nav class="flex text-center align-center h-100">
-				<div class="flex-child w-50">
-					<a class="active" href="/">HOME</a>
-				</div>
-				<div class="flex-child w-50">
-					<a href="/blog">BLOG</a>
-				</div>
-			</nav>
+		<div class="navigation">
+			<div class="margin-auto mw-small h-100">
+				<nav class="flex text-center align-center h-100">
+					<div class="flex-child w-50">
+						<a class="active" href="/">HOME</a>
+					</div>
+					<div class="flex-child w-50">
+						<a href="/blog">BLOG</a>
+					</div>
+				</nav>
+			</div>
 		</div>
 	`
 }
