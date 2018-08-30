@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({9:[function(require,module,exports) {
+})({13:[function(require,module,exports) {
 module.exports = scrollToAnchor
 
 function scrollToAnchor (anchor, options) {
@@ -89,14 +89,14 @@ function scrollToAnchor (anchor, options) {
   }
 }
 
-},{}],34:[function(require,module,exports) {
+},{}],48:[function(require,module,exports) {
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],35:[function(require,module,exports) {
+},{}],49:[function(require,module,exports) {
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -121,7 +121,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],33:[function(require,module,exports) {
+},{}],47:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -308,7 +308,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],31:[function(require,module,exports) {
+},{}],38:[function(require,module,exports) {
 var global = (1,eval)("this");
 var process = require("process");
 // Copyright Joyent, Inc. and other Node contributors.
@@ -855,7 +855,7 @@ exports._extend = function (origin, add) {
 function hasOwnProperty(obj, prop) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
-},{"./support/isBuffer":34,"inherits":35,"process":33}],15:[function(require,module,exports) {
+},{"./support/isBuffer":48,"inherits":49,"process":47}],32:[function(require,module,exports) {
 var global = (1,eval)("this");
 'use strict';
 
@@ -1348,7 +1348,7 @@ var objectKeys = Object.keys || function (obj) {
   return keys;
 };
 
-},{"util/":31}],4:[function(require,module,exports) {
+},{"util/":38}],8:[function(require,module,exports) {
 'use strict'
 
 var assert = require('assert')
@@ -1367,7 +1367,7 @@ function ready (callback) {
   })
 }
 
-},{"assert":15}],8:[function(require,module,exports) {
+},{"assert":32}],12:[function(require,module,exports) {
 assert.notEqual = notEqual
 assert.notOk = notOk
 assert.equal = equal
@@ -1391,7 +1391,7 @@ function assert (t, m) {
   if (!t) throw new Error(m || 'AssertionError')
 }
 
-},{}],19:[function(require,module,exports) {
+},{}],34:[function(require,module,exports) {
 var assert = require('assert')
 
 var hasWindow = typeof window !== 'undefined'
@@ -1448,7 +1448,7 @@ NanoScheduler.prototype.setTimeout = function (cb) {
 
 module.exports = createScheduler
 
-},{"assert":8}],5:[function(require,module,exports) {
+},{"assert":12}],9:[function(require,module,exports) {
 var scheduler = require('nanoscheduler')()
 var assert = require('assert')
 
@@ -1498,7 +1498,7 @@ function noop (cb) {
   }
 }
 
-},{"nanoscheduler":19,"assert":8}],25:[function(require,module,exports) {
+},{"nanoscheduler":34,"assert":12}],45:[function(require,module,exports) {
 module.exports = extend;
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -1516,7 +1516,7 @@ function extend(target) {
 
     return target;
 }
-},{}],14:[function(require,module,exports) {
+},{}],18:[function(require,module,exports) {
 module.exports = extend;
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -1536,7 +1536,7 @@ function extend() {
 
     return target;
 }
-},{}],23:[function(require,module,exports) {
+},{}],39:[function(require,module,exports) {
 var mutate = require('xtend/mutable')
 var assert = require('assert')
 var xtend = require('xtend')
@@ -1674,7 +1674,7 @@ Trie.prototype.mount = function (route, trie) {
   }
 }
 
-},{"xtend/mutable":25,"assert":15,"xtend":14}],18:[function(require,module,exports) {
+},{"xtend/mutable":45,"assert":32,"xtend":18}],35:[function(require,module,exports) {
 var assert = require('assert')
 var trie = require('./trie')
 
@@ -1753,7 +1753,7 @@ function Wayfarer (dft) {
   }
 }
 
-},{"assert":15,"./trie":23}],10:[function(require,module,exports) {
+},{"assert":32,"./trie":39}],14:[function(require,module,exports) {
 var assert = require('assert')
 var wayfarer = require('wayfarer')
 
@@ -1809,7 +1809,7 @@ function pathname (routename, isElectron) {
   return decodeURI(routename.replace(suffix, '').replace(normalize, '/'))
 }
 
-},{"assert":8,"wayfarer":18}],22:[function(require,module,exports) {
+},{"assert":12,"wayfarer":35}],50:[function(require,module,exports) {
 module.exports = [
   // attribute events (can be set with attributes)
   'onclick',
@@ -1853,7 +1853,7 @@ module.exports = [
   'onfocusout'
 ]
 
-},{}],16:[function(require,module,exports) {
+},{}],33:[function(require,module,exports) {
 var events = require('./events')
 var eventsLength = events.length
 
@@ -2019,7 +2019,7 @@ function updateAttribute (newNode, oldNode, name) {
   }
 }
 
-},{"./events":22}],6:[function(require,module,exports) {
+},{"./events":50}],10:[function(require,module,exports) {
 var assert = require('assert')
 var morph = require('./lib/morph')
 
@@ -2170,7 +2170,7 @@ function same (a, b) {
   return false
 }
 
-},{"assert":8,"./lib/morph":16}],11:[function(require,module,exports) {
+},{"assert":12,"./lib/morph":33}],15:[function(require,module,exports) {
 var reg = /([^?=&]+)(=([^&]*))?/g
 var assert = require('assert')
 
@@ -2187,7 +2187,7 @@ function qs (url) {
   return obj
 }
 
-},{"assert":8}],12:[function(require,module,exports) {
+},{"assert":12}],16:[function(require,module,exports) {
 var assert = require('assert')
 
 var safeExternalLink = /(noopener|noreferrer) (noopener|noreferrer)/
@@ -2232,7 +2232,7 @@ function href (cb, root) {
   })
 }
 
-},{"assert":8}],7:[function(require,module,exports) {
+},{"assert":12}],11:[function(require,module,exports) {
 'use strict'
 
 var assert = require('assert')
@@ -2269,7 +2269,7 @@ function nanoraf (render, raf) {
   }
 }
 
-},{"assert":8}],20:[function(require,module,exports) {
+},{"assert":12}],36:[function(require,module,exports) {
 'use strict'
 
 /**
@@ -2299,7 +2299,7 @@ module.exports = function removeItems(arr, startIdx, removeCount)
   arr.length = len
 }
 
-},{}],13:[function(require,module,exports) {
+},{}],17:[function(require,module,exports) {
 var splice = require('remove-array-items')
 var nanotiming = require('nanotiming')
 var assert = require('assert')
@@ -2463,7 +2463,7 @@ Nanobus.prototype._emit = function (arr, eventName, data, uuid) {
   }
 }
 
-},{"remove-array-items":20,"nanotiming":5,"assert":15}],17:[function(require,module,exports) {
+},{"remove-array-items":36,"nanotiming":9,"assert":32}],37:[function(require,module,exports) {
 module.exports = LRU;
 
 function LRU(opts) {
@@ -2602,7 +2602,7 @@ LRU.prototype.evict = function () {
   if (!this.tail) return;
   this.remove(this.tail);
 };
-},{}],3:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 var assert = require('assert')
 var LRU = require('nanolru')
 
@@ -2645,7 +2645,7 @@ function newCall (Cls) {
   return new (Cls.bind.apply(Cls, arguments)) // eslint-disable-line
 }
 
-},{"assert":8,"nanolru":17}],2:[function(require,module,exports) {
+},{"assert":12,"nanolru":37}],3:[function(require,module,exports) {
 var scrollToAnchor = require('scroll-to-anchor')
 var documentReady = require('document-ready')
 var nanotiming = require('nanotiming')
@@ -2918,7 +2918,7 @@ Choo.prototype._setCache = function (state) {
   }
 }
 
-},{"scroll-to-anchor":9,"document-ready":4,"nanotiming":5,"nanorouter":10,"nanomorph":6,"nanoquery":11,"nanohref":12,"nanoraf":7,"nanobus":13,"assert":8,"xtend":14,"./component/cache":3}],32:[function(require,module,exports) {
+},{"scroll-to-anchor":13,"document-ready":8,"nanotiming":9,"nanorouter":14,"nanomorph":10,"nanoquery":15,"nanohref":16,"nanoraf":11,"nanobus":17,"assert":12,"xtend":18,"./component/cache":7}],46:[function(require,module,exports) {
 module.exports = attributeToProperty
 
 var transform = {
@@ -2939,7 +2939,7 @@ function attributeToProperty (h) {
   }
 }
 
-},{}],30:[function(require,module,exports) {
+},{}],44:[function(require,module,exports) {
 var attrToProp = require('hyperscript-attribute-to-property')
 
 var VAR = 0, TEXT = 1, OPEN = 2, CLOSE = 3, ATTR = 4
@@ -3235,7 +3235,7 @@ var closeRE = RegExp('^(' + [
 ].join('|') + ')(?:[\.#][a-zA-Z0-9\u007F-\uFFFF_:-]+)*$')
 function selfClosing (tag) { return closeRE.test(tag) }
 
-},{"hyperscript-attribute-to-property":32}],26:[function(require,module,exports) {
+},{"hyperscript-attribute-to-property":46}],40:[function(require,module,exports) {
 var trailingNewlineRegex = /\n[\s]+$/
 var leadingNewlineRegex = /^\n[\s]+/
 var trailingSpaceRegex = /[\s]+$/
@@ -3368,7 +3368,7 @@ module.exports = function appendChild (el, childs) {
   }
 }
 
-},{}],27:[function(require,module,exports) {
+},{}],41:[function(require,module,exports) {
 module.exports = [
   'svg', 'altGlyph', 'altGlyphDef', 'altGlyphItem', 'animate', 'animateColor',
   'animateMotion', 'animateTransform', 'circle', 'clipPath', 'color-profile',
@@ -3386,18 +3386,18 @@ module.exports = [
   'tspan', 'use', 'view', 'vkern'
 ]
 
-},{}],28:[function(require,module,exports) {
+},{}],42:[function(require,module,exports) {
 module.exports = [
   'autofocus', 'checked', 'defaultchecked', 'disabled', 'formnovalidate',
   'indeterminate', 'readonly', 'required', 'selected', 'willvalidate'
 ]
 
-},{}],29:[function(require,module,exports) {
+},{}],43:[function(require,module,exports) {
 module.exports = [
   'indeterminate'
 ]
 
-},{}],24:[function(require,module,exports) {
+},{}],31:[function(require,module,exports) {
 var hyperx = require('hyperx')
 var appendChild = require('./append-child')
 var SVG_TAGS = require('./svg-tags')
@@ -3480,10 +3480,10 @@ module.exports = hyperx(nanoHtmlCreateElement, {comments: true})
 module.exports.default = module.exports
 module.exports.createElement = nanoHtmlCreateElement
 
-},{"hyperx":30,"./append-child":26,"./svg-tags":27,"./bool-props":28,"./direct-props":29}],21:[function(require,module,exports) {
+},{"hyperx":44,"./append-child":40,"./svg-tags":41,"./bool-props":42,"./direct-props":43}],5:[function(require,module,exports) {
 module.exports = require('nanohtml')
 
-},{"nanohtml":24}],1:[function(require,module,exports) {
+},{"nanohtml":31}],1:[function(require,module,exports) {
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['\n\t\t<body>\n\t\t\t', '\n\t\t\t', '\n\t\t\t', '\n    </body>\n  '], ['\n\t\t<body>\n\t\t\t', '\n\t\t\t', '\n\t\t\t', '\n    </body>\n  ']),
@@ -3551,7 +3551,7 @@ var blogView = function blogView(state, emit) {
 var footerView = function footerView(state, emit) {
 	return (0, _html2.default)(_templateObject5);
 };
-},{"choo":2,"choo/html":21}],101:[function(require,module,exports) {
+},{"choo":3,"choo/html":5}],51:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -3581,7 +3581,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '34653' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '41617' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -3720,5 +3720,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[101,1])
+},{}]},{},[51,1])
 //# sourceMappingURL=/index.map
